@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>API Display</title>
+</head>
+<body>
+   <style>
+    table, tr, th, td {
+        border: 1px solid;
+      }
+   </style>
+    <h1>List of Books</h1>
+    <table>
+        <tr>
+            <th> Title</th>
+            <th> author</th>
+            <th> authors</th>
+            <th> isbn13</th>
+            <th> isbn10</th>
+            <th> price</th>
+            <th> publisher</th>
+            <th> pubyear</th>
+            <th> subjects</th>
+            <th> pages</th>
+        </tr>
+            {% for i in response %}
+            <tr>
+                <td>{{i.title}}</td>
+                <td>{{i.author}}</td>
+                <td>{{i.authors}}</td>
+                <td>{{i.isbn13}}</td>
+                <td>{{i.isbn10}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.publisher}}</td>
+                <td>{{i.pubyear}}</td>
+                <td>{{i.subjects}}</td>
+                <td>{{i.pages}}</td>
+            </tr>
+            {% endfor %}
+    
+     </table>
+</body>
+</html>
